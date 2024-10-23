@@ -239,11 +239,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arosl\\Downloads\\Telegram Desktop\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Users\\arosl\\Documents\\GitHub\\HMI\\WinFormsApp1\\WinFormsApp1.csproj",
       "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Users\\arosl\\Downloads\\Telegram Desktop\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectPath": "C:\\Users\\arosl\\Documents\\GitHub\\HMI\\WinFormsApp1\\WinFormsApp1.csproj",
       "packagesPath": "C:\\Users\\arosl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arosl\\Downloads\\Telegram Desktop\\WinFormsApp1\\obj\\",
+      "outputPath": "C:\\Users\\arosl\\Documents\\GitHub\\HMI\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

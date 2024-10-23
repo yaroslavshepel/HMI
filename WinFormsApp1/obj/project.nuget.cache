@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eo2imKiu/b4=",
+  "dgSpecHash": "n1iwkNS4pjI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\arosl\\Downloads\\Telegram Desktop\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "C:\\Users\\arosl\\Documents\\GitHub\\HMI\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arosl\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\arosl\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
