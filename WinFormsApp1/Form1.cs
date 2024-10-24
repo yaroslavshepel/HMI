@@ -128,13 +128,26 @@ namespace ESP8266Controller
             try
             {
                 string data = serialPort.ReadLine();
-                this.Invoke((MethodInvoker)delegate {
+                this.Invoke((MethodInvoker)delegate
+                {
                     textBoxReceivedData.AppendText(data + Environment.NewLine);
                 });
+                this.Invoke(new Action(() =>
+                {
+                    if (data.Contains("ButtonPressed"))
+                    {
+                        label1.Text = "Кнопка нажата";
+                    }
+                    else if (data.Contains("ButtonReleased"))
+                    {
+                        label1.Text = "Кнопка не нажата";
+                    }
+                }));
             }
             catch (Exception ex)
             {
-                this.Invoke((MethodInvoker)delegate {
+                this.Invoke((MethodInvoker)delegate
+                {
                     MessageBox.Show($"Помилка при отриманні даних: {ex.Message}");
                     DisconnectPort();
                 });
@@ -150,6 +163,17 @@ namespace ESP8266Controller
         {
             RefreshComPorts();
         }
+
+        private void textBoxReceivedData_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
 

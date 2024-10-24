@@ -16,75 +16,94 @@ namespace ESP8266Controller
 
         private void InitializeComponent()
         {
-            this.comboBoxPorts = new System.Windows.Forms.ComboBox();
-            this.buttonConnect = new System.Windows.Forms.Button();
-            this.buttonLED1 = new System.Windows.Forms.Button();
-            this.buttonLED2 = new System.Windows.Forms.Button();
-            this.textBoxReceivedData = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            comboBoxPorts = new ComboBox();
+            buttonConnect = new Button();
+            buttonLED1 = new Button();
+            buttonLED2 = new Button();
+            textBoxReceivedData = new TextBox();
+            label1 = new Label();
+            SuspendLayout();
             // 
             // comboBoxPorts
             // 
-            this.comboBoxPorts.FormattingEnabled = true;
-            this.comboBoxPorts.Location = new System.Drawing.Point(12, 12);
-            this.comboBoxPorts.Name = "comboBoxPorts";
-            this.comboBoxPorts.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxPorts.TabIndex = 0;
+            comboBoxPorts.FormattingEnabled = true;
+            comboBoxPorts.Location = new Point(14, 14);
+            comboBoxPorts.Margin = new Padding(4, 3, 4, 3);
+            comboBoxPorts.Name = "comboBoxPorts";
+            comboBoxPorts.Size = new Size(140, 23);
+            comboBoxPorts.TabIndex = 0;
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(139, 12);
-            this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(75, 23);
-            this.buttonConnect.TabIndex = 1;
-            this.buttonConnect.Text = "Connect";
-            this.buttonConnect.UseVisualStyleBackColor = true;
-            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            buttonConnect.Location = new Point(162, 14);
+            buttonConnect.Margin = new Padding(4, 3, 4, 3);
+            buttonConnect.Name = "buttonConnect";
+            buttonConnect.Size = new Size(88, 27);
+            buttonConnect.TabIndex = 1;
+            buttonConnect.Text = "Connect";
+            buttonConnect.UseVisualStyleBackColor = true;
+            buttonConnect.Click += buttonConnect_Click;
             // 
             // buttonLED1
             // 
-            this.buttonLED1.Location = new System.Drawing.Point(12, 39);
-            this.buttonLED1.Name = "buttonLED1";
-            this.buttonLED1.Size = new System.Drawing.Size(75, 23);
-            this.buttonLED1.TabIndex = 2;
-            this.buttonLED1.Text = "LED 1 ON";
-            this.buttonLED1.UseVisualStyleBackColor = true;
-            this.buttonLED1.Click += new System.EventHandler(this.buttonLED1_Click);
+            buttonLED1.Location = new Point(14, 45);
+            buttonLED1.Margin = new Padding(4, 3, 4, 3);
+            buttonLED1.Name = "buttonLED1";
+            buttonLED1.Size = new Size(88, 27);
+            buttonLED1.TabIndex = 2;
+            buttonLED1.Text = "LED 1 ON";
+            buttonLED1.UseVisualStyleBackColor = true;
+            buttonLED1.Click += buttonLED1_Click;
             // 
             // buttonLED2
             // 
-            this.buttonLED2.Location = new System.Drawing.Point(93, 39);
-            this.buttonLED2.Name = "buttonLED2";
-            this.buttonLED2.Size = new System.Drawing.Size(75, 23);
-            this.buttonLED2.TabIndex = 3;
-            this.buttonLED2.Text = "LED 2 ON";
-            this.buttonLED2.UseVisualStyleBackColor = true;
-            this.buttonLED2.Click += new System.EventHandler(this.buttonLED2_Click);
+            buttonLED2.Location = new Point(108, 45);
+            buttonLED2.Margin = new Padding(4, 3, 4, 3);
+            buttonLED2.Name = "buttonLED2";
+            buttonLED2.Size = new Size(88, 27);
+            buttonLED2.TabIndex = 3;
+            buttonLED2.Text = "LED 2 ON";
+            buttonLED2.UseVisualStyleBackColor = true;
+            buttonLED2.Click += buttonLED2_Click;
             // 
             // textBoxReceivedData
             // 
-            this.textBoxReceivedData.Location = new System.Drawing.Point(12, 68);
-            this.textBoxReceivedData.Multiline = true;
-            this.textBoxReceivedData.Name = "textBoxReceivedData";
-            this.textBoxReceivedData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxReceivedData.Size = new System.Drawing.Size(260, 181);
-            this.textBoxReceivedData.TabIndex = 4;
+            textBoxReceivedData.Location = new Point(14, 78);
+            textBoxReceivedData.Margin = new Padding(4, 3, 4, 3);
+            textBoxReceivedData.Multiline = true;
+            textBoxReceivedData.Name = "textBoxReceivedData";
+            textBoxReceivedData.ScrollBars = ScrollBars.Vertical;
+            textBoxReceivedData.Size = new Size(303, 208);
+            textBoxReceivedData.TabIndex = 4;
+            textBoxReceivedData.TextChanged += textBoxReceivedData_TextChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(212, 57);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 5;
+            label1.Text = "";
+            label1.Click += label1_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.textBoxReceivedData);
-            this.Controls.Add(this.buttonLED2);
-            this.Controls.Add(this.buttonLED1);
-            this.Controls.Add(this.buttonConnect);
-            this.Controls.Add(this.comboBoxPorts);
-            this.Name = "Form1";
-            this.Text = "ESP8266 Controller";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(331, 301);
+            Controls.Add(label1);
+            Controls.Add(textBoxReceivedData);
+            Controls.Add(buttonLED2);
+            Controls.Add(buttonLED1);
+            Controls.Add(buttonConnect);
+            Controls.Add(comboBoxPorts);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "Form1";
+            Text = "ESP8266 Controller";
+            FormClosing += Form1_FormClosing;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.ComboBox comboBoxPorts;
@@ -92,5 +111,6 @@ namespace ESP8266Controller
         private System.Windows.Forms.Button buttonLED1;
         private System.Windows.Forms.Button buttonLED2;
         private System.Windows.Forms.TextBox textBoxReceivedData;
+        private Label label1;
     }
 }
